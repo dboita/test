@@ -1,0 +1,20 @@
+version: "3"
+
+services:
+    node1:
+        build: ./node1
+        container_name: node1
+        ports:
+            - "81:80"
+
+    node2:
+        build: ./node2
+        container_name: node2
+        ports:
+            - "82:80"
+
+    haproxy:
+        build: ./haproxy
+        container_name: haproxy
+        ports:
+            - "80:80"
